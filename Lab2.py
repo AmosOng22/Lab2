@@ -24,10 +24,21 @@ def find_min_max(list):
  return minmaxlist
 
 def sort_temperature(list):
+ list.sort()
  return list
 
 def calc_median_temperature(list):
- return list
+ a = float(len(list))
+
+ if a % 2 == 0:
+  b = float(list[len(list) // 2])
+  c = float(list[(len(list) // 2) - 1])
+  d = (b + c) / 2.0
+  return float(d)
+
+ if a % 2 > 0:
+  return float(list[len(list) // 2])
+
 
 def display_main_menu():
  print("Enter some numbers separated by commas (e.g. 5, 67,32)")
@@ -39,6 +50,7 @@ def main():
 
  print(calc_average(num_list))
  print(find_min_max(num_list))
+ print(calc_median_temperature(sort_temperature(num_list)))
 
 if __name__ == "__main__":
      main()
