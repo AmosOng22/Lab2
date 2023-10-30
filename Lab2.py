@@ -48,9 +48,9 @@ def main():
  display_main_menu()
  num_list = get_user_input()
 
- print(calc_average(num_list))
- print(find_min_max(num_list))
- print(calc_median_temperature(sort_temperature(num_list)))
+ print("Average= " +str(calc_average(num_list)))
+ print("MinMax= " +str(find_min_max(num_list)))
+ print("Median= " +str(calc_median_temperature(sort_temperature(num_list))))
 
 if __name__ == "__main__":
      main()
